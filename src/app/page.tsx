@@ -33,7 +33,35 @@ const Icons = {
         <path d="M5 10v1a7 7 0 007 7v0a7 7 0 007-7v-1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
         <path d="M12 19v3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
-  )
+  ),
+  briefcase: (props) => (
+    <svg {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 6V5a3 3 0 00-3-3h-2a3 3 0 00-3 3v1H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2h-2zM8 5a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm12 13H4V8h16v10z" fill="currentColor"/></svg>
+  ),
+  code: (props) => (
+    <svg {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 16.5L4 12l4.5-4.5m7 9L20 12l-4.5-4.5M15 4l-6 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+  ),
+  rocket: (props) => (
+    <svg {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11.5a2.5 2.5 0 012.5 2.5c0 .5-.4 1.3-.8 1.8l-1.7 2.2-1.7-2.2c-.4-.5-.8-1.3-.8-1.8a2.5 2.5 0 012.5-2.5z" fill="currentColor"/><path d="M13.8 11.1c.3-.3.4-.6.4-1V5.8c0-.8-.7-1.5-1.5-1.5h-1.4c-.8 0-1.5.7-1.5 1.5V10c0 .4.1.7.4 1l.2.2c.4.4.9.6 1.4.6s1-.2 1.4-.6l.2-.2z" stroke="currentColor" strokeWidth="1.5"/><path d="M10 20h4M7.5 17h9a.5.5 0 00.5-.5V14h-10v2.5c0 .3.2.5.5.5z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+  ),
+  bookOpen: (props) => (
+
+      <svg {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" 
+          stroke="currentColor" 
+          strokeWidth="1.5" 
+          strokeLinecap="round" 
+          strokeLinejoin="round"/>
+      </svg>
+  ),
+  users: (props) => (
+    <svg {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M23 21v-2a4 4 0 00-3-3.87" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M16 3.13a4 4 0 010 7.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  ),
+
 };
 
 const TechStackIcons = ({ name }) => {
@@ -53,7 +81,7 @@ const Header = () => (
   <header className="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-800">
     <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
       <div className="text-2xl font-bold text-white">
-        AI<span className="text-blue-400">Dev</span>Course
+        AI<span className="text-blue-400">应用开发</span>课程
       </div>
       <a 
         href="#cta" 
@@ -69,7 +97,7 @@ const Hero = () => (
   <section className="py-20 md:py-32 bg-gray-900">
     <div className="container mx-auto px-6 text-center">
       <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-        从开发者到 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">AI 架构师</span>
+        转型 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">AI 应用开发工程师</span>
         <br />
         构建并部署你自己的 AI 应用
       </h1>
@@ -89,6 +117,60 @@ const Hero = () => (
   </section>
 );
 
+const MarketDemand = () => {
+    const points = [
+      {
+        icon: <Icons.briefcase className="w-8 h-8 mx-auto text-blue-400" />,
+        title: "技术变革中的人才升级",
+        description: "大模型快速落地，企业亟需能理解业务并掌握 AI 工具的复合型人才。学习 AI 应用开发，是提升通用性与长期职业竞争力的重要路径。"
+      },
+      {
+        icon: <Icons.code className="w-8 h-8 mx-auto text-blue-400" />,
+        title: "开发者的创作杠杆",
+        description: "通过掌握 AI 应用开发，独立开发者可以用更少的人力打造更强功能，实现个人项目、初创产品的快速迭代和上线。"
+      },
+      {
+        icon: <Icons.rocket className="w-8 h-8 mx-auto text-blue-400" />,
+        title: "未来技术的新基础设施",
+        description: "AI 正在成为像数据库、网络一样的技术底座。越早掌握 AI 开发能力，越能在技术演进中形成复利效应，拥有更多主动权。"
+      },
+      {
+        icon: <Icons.chevronDown className="w-8 h-8 mx-auto text-blue-400" />,
+        title: "穿越风口的理性选择",
+        description: "与其盲目追逐趋势，不如深入理解 AI 如何落地。学习 AI 应用开发，让你在技术演进中少被替代，多一些选择与确定性。"
+      },
+      {
+        icon: <Icons.bookOpen className="w-8 h-8 mx-auto text-blue-400" />,
+        title: "AI 技术栈的入门门槛降低",
+        description: "得益于开源模型、API 服务、开发框架的普及，现在比以往任何时候都更容易入门 AI 应用开发。普通开发者也能在短时间内构建实用原型。"
+      },
+      {
+        icon: <Icons.users className="w-8 h-8 mx-auto text-blue-400" />,
+        title: "跨领域协作的新通用语言",
+        description: "AI 开发正在成为产品、设计、运营与技术协作的新桥梁。掌握 AI 能力，不只是写代码，更是增强与团队沟通和驱动产品落地的核心能力。"
+      },
+    ];
+    return (
+        <section id="market" className="py-20 bg-gray-800/50">
+            <div className="container mx-auto px-6">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white">为什么现在要学 AI 应用开发？</h2>
+                    <p className="text-gray-400 mt-4 max-w-3xl mx-auto">抓住时代机遇，成为行业抢手的顶尖人才。</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    {points.map((point, index) => (
+                        <div key={index} className="bg-gray-900 p-8 rounded-xl border border-transparent hover:border-blue-500 transition-colors duration-300">
+                           <div className="mb-4">{point.icon}</div>
+                           <h3 className="font-bold text-xl text-white mb-2">{point.title}</h3>
+                           <p className="text-gray-400">{point.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
 const Benefits = () => {
     const benefits = [
         { title: "主流模型 API 调用", description: "精通 OpenAI (GPT-4/DALL·E), Google (Gemini), Hugging Face 等平台的核心接口。" },
@@ -100,7 +182,7 @@ const Benefits = () => {
     ];
 
     return (
-        <section id="benefits" className="py-20 bg-gray-800/50">
+        <section id="benefits" className="py-20">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-white">你将收获的核心能力</h2>
@@ -140,7 +222,7 @@ const Modules = () => {
     };
 
     return (
-        <section id="modules" className="py-20">
+        <section id="modules" className="py-20 bg-gray-800/50">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-white">详细课程大纲</h2>
@@ -181,7 +263,7 @@ const CapstoneProject = () => {
     ];
     
     return (
-        <section id="project" className="py-20 bg-gray-800/50">
+        <section id="project" className="py-20">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-white">毕业项目：打造一个拿得出手的 AI 产品</h2>
@@ -200,6 +282,57 @@ const CapstoneProject = () => {
         </section>
     );
 };
+
+const TargetAudience = () => {
+    const audience = [
+        {
+            icon: "👩‍💻",
+            title: "后端/数据开发者",
+            description: "希望从传统业务转向炙手可热的 AI 赛道，为职业生涯增添新动力。"
+        },
+        {
+            icon: "🎨",
+            title: "前端/全栈开发者",
+            description: "渴望为自己的应用注入强大的 AI 能力，打造更智能、更有趣的用户体验。"
+        },
+        {
+            icon: "🎓",
+            title: "计算机专业学生",
+            description: "希望系统性学习，掌握企业真正需要的 AI 开发技能，在求职中脱颖而出。"
+        },
+        {
+            icon: "👨‍💼",
+            title: "技术创业者/产品经理",
+            description: "希望深入了解 AI 技术实现，更好地规划和打造 AI 驱动的创新产品。"
+        }
+    ];
+
+    return (
+        <section id="audience" className="py-20 bg-gray-800/50">
+            <div className="container mx-auto px-6">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white">本课程为谁设计？</h2>
+                    <p className="mt-4 text-lg text-blue-400 font-semibold">
+                        专为开发者设计，零 AI 基础也能快速上手！
+                    </p>
+                    <p className="mt-2 text-gray-400 max-w-2xl mx-auto">
+                        只要你具备基础的 Python 编程能力，并了解 Web 开发的基本概念，就能跟上本课程的节奏，开启你的 AI 之旅。
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {audience.map((person, index) => (
+                        <div key={index} className="bg-gray-900 p-8 rounded-xl text-center border border-gray-700 hover:border-blue-500 hover:scale-105 transition-all duration-300">
+                            <div className="text-5xl mb-4">{person.icon}</div>
+                            <h3 className="font-bold text-xl text-white mb-2">{person.title}</h3>
+                            <p className="text-gray-400 text-sm">{person.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
 
 const TechStack = () => {
     const techLogos = [
@@ -230,19 +363,25 @@ const CTA = () => (
         <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white">准备好构建未来了吗？</h2>
             <p className="mt-4 text-gray-300 max-w-xl mx-auto">
-                掌握 AI 应用开发能力，就是掌握未来的核心竞争力。
+                掌握 AI 应用开发能力，就是掌握未来的核心竞争力。不要再犹豫，立即加入我们！
             </p>
-            <div className="mt-10">
+            
+            <div className="my-8 flex justify-center items-end gap-4">
+                <span className="text-xl text-gray-500 line-through">原价 ¥498</span>
+                <span className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400">
+                    早鸟价 ¥298
+                </span>
+            </div>
+
+            <div className="mt-6">
                 <a href="#" className="bg-blue-600 text-white font-bold py-4 px-10 rounded-lg text-xl hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 inline-block shadow-lg shadow-blue-500/30">
-                    立即报名
+                    立即锁定席位
                 </a>
                 <ul className="mt-8 flex flex-col md:flex-row justify-center items-center gap-x-6 gap-y-2 text-gray-400">
                     <li>✔️ 36 节高清视频课程</li>
                     <li>✔️ 所有课程代码和项目文件</li>
-                    <li>✔️ 所有课程相关的文稿</li>
                     <li>✔️ 专属学员社群，共同交流进步</li>
                     <li>✔️ 课程结业证书</li>
-                    <li>✔️ 熊猫老板定制的特别礼品</li>
                 </ul>
             </div>
         </div>
@@ -252,7 +391,7 @@ const CTA = () => (
 const Footer = () => (
     <footer className="py-6 bg-gray-900 border-t border-gray-800">
         <div className="container mx-auto px-6 text-center text-gray-500">
-            <p>&copy; {new Date().getFullYear()} AI应用开发课·由 Panda 老板创建 & 保留所有权利 </p>
+            <p>&copy; {new Date().getFullYear()} AI Dev Course. All Rights Reserved.</p>
         </div>
     </footer>
 );
@@ -267,9 +406,11 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <MarketDemand />
         <Benefits />
         <Modules />
         <CapstoneProject />
+        <TargetAudience />
         <TechStack />
         <CTA />
       </main>

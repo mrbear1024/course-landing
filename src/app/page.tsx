@@ -43,25 +43,6 @@ const Icons = {
   rocket: (props) => (
     <svg {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11.5a2.5 2.5 0 012.5 2.5c0 .5-.4 1.3-.8 1.8l-1.7 2.2-1.7-2.2c-.4-.5-.8-1.3-.8-1.8a2.5 2.5 0 012.5-2.5z" fill="currentColor"/><path d="M13.8 11.1c.3-.3.4-.6.4-1V5.8c0-.8-.7-1.5-1.5-1.5h-1.4c-.8 0-1.5.7-1.5 1.5V10c0 .4.1.7.4 1l.2.2c.4.4.9.6 1.4.6s1-.2 1.4-.6l.2-.2z" stroke="currentColor" strokeWidth="1.5"/><path d="M10 20h4M7.5 17h9a.5.5 0 00.5-.5V14h-10v2.5c0 .3.2.5.5.5z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
   ),
-  bookOpen: (props) => (
-
-      <svg {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" 
-          stroke="currentColor" 
-          strokeWidth="1.5" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"/>
-      </svg>
-  ),
-  users: (props) => (
-    <svg {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M23 21v-2a4 4 0 00-3-3.87" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M16 3.13a4 4 0 010 7.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
-  ),
-
 };
 
 const TechStackIcons = ({ name }) => {
@@ -81,7 +62,7 @@ const Header = () => (
   <header className="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-800">
     <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
       <div className="text-2xl font-bold text-white">
-        AI<span className="text-blue-400">应用开发</span>课程
+        AI<span className="text-blue-400">Dev</span>Course
       </div>
       <a 
         href="#cta" 
@@ -97,7 +78,7 @@ const Hero = () => (
   <section className="py-20 md:py-32 bg-gray-900">
     <div className="container mx-auto px-6 text-center">
       <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-        转型 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">AI 应用开发工程师</span>
+        从开发者到 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">AI 架构师</span>
         <br />
         构建并部署你自己的 AI 应用
       </h1>
@@ -119,43 +100,28 @@ const Hero = () => (
 
 const MarketDemand = () => {
     const points = [
-      {
-        icon: <Icons.briefcase className="w-8 h-8 mx-auto text-blue-400" />,
-        title: "技术变革中的人才升级",
-        description: "大模型快速落地，企业亟需能理解业务并掌握 AI 工具的复合型人才。学习 AI 应用开发，是提升通用性与长期职业竞争力的重要路径。"
-      },
-      {
-        icon: <Icons.code className="w-8 h-8 mx-auto text-blue-400" />,
-        title: "开发者的创作杠杆",
-        description: "通过掌握 AI 应用开发，独立开发者可以用更少的人力打造更强功能，实现个人项目、初创产品的快速迭代和上线。"
-      },
-      {
-        icon: <Icons.rocket className="w-8 h-8 mx-auto text-blue-400" />,
-        title: "未来技术的新基础设施",
-        description: "AI 正在成为像数据库、网络一样的技术底座。越早掌握 AI 开发能力，越能在技术演进中形成复利效应，拥有更多主动权。"
-      },
-      {
-        icon: <Icons.chevronDown className="w-8 h-8 mx-auto text-blue-400" />,
-        title: "穿越风口的理性选择",
-        description: "与其盲目追逐趋势，不如深入理解 AI 如何落地。学习 AI 应用开发，让你在技术演进中少被替代，多一些选择与确定性。"
-      },
-      {
-        icon: <Icons.bookOpen className="w-8 h-8 mx-auto text-blue-400" />,
-        title: "AI 技术栈的入门门槛降低",
-        description: "得益于开源模型、API 服务、开发框架的普及，现在比以往任何时候都更容易入门 AI 应用开发。普通开发者也能在短时间内构建实用原型。"
-      },
-      {
-        icon: <Icons.users className="w-8 h-8 mx-auto text-blue-400" />,
-        title: "跨领域协作的新通用语言",
-        description: "AI 开发正在成为产品、设计、运营与技术协作的新桥梁。掌握 AI 能力，不只是写代码，更是增强与团队沟通和驱动产品落地的核心能力。"
-      },
+        {
+            icon: <Icons.briefcase className="w-8 h-8 mx-auto text-blue-400" />,
+            title: "技术岗位需求演变",
+            description: "随着大模型技术普及，企业对能够结合业务场景、开发AI原生应用的人才需求剧增，相关岗位成为招聘市场的热点。"
+        },
+        {
+            icon: <Icons.code className="w-8 h-8 mx-auto text-blue-400" />,
+            title: "开发者技能栈拓展",
+            description: "AI开发能力不再是独立分支，而是与前后端、数据工程等技能深度融合。掌握AI使开发者能够构建功能更强大、更智能化的产品。"
+        },
+        {
+            icon: <Icons.rocket className="w-8 h-8 mx-auto text-blue-400" />,
+            title: "长期技术价值与前景",
+            description: "人工智能正成为驱动各行业数字化转型的核心技术。投资于AI开发技能，是构建面向未来的、可持续的职业竞争力的理性选择。"
+        },
     ];
     return (
         <section id="market" className="py-20 bg-gray-800/50">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">为什么现在要学 AI 应用开发？</h2>
-                    <p className="text-gray-400 mt-4 max-w-3xl mx-auto">抓住时代机遇，成为行业抢手的顶尖人才。</p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white">当前技术趋势与职业机遇</h2>
+                    <p className="text-gray-400 mt-4 max-w-3xl mx-auto">理性分析 AI 应用开发领域的现状与未来价值。</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     {points.map((point, index) => (
@@ -177,6 +143,7 @@ const Benefits = () => {
         { title: "全栈 AI 应用开发", description: "使用 FastAPI (Python后端) 和 Next.js (前端) 构建交互式 AI Web 应用。" },
         { title: "企业级 RAG 系统构建", description: "从 0 到 1 搭建基于私有知识库的问答系统，掌握向量数据库核心技术。" },
         { title: "多模态应用整合", description: "融合文本、语音、图像，开发 AI 助手、图文创作等前沿多模态应用。" },
+        { title: "AI 编程最佳实践", description: "掌握 AI 时代的编程新范式，学习 Vibe Coding 等前沿技巧，与 AI 协作，高效交付高质量代码。" },
         { title: "端到端部署与优化", description: "掌握 Docker、Vercel、AWS 等工具，实现模型压缩、推理优化与一键部署。" },
         { title: "AI 安全与伦理", description: "学习规避 AI 开发中的安全风险、数据隐私和合规问题，做负责任的开发者。" }
     ];
@@ -209,7 +176,7 @@ const Modules = () => {
         { title: "模块四：自然语言处理（LLM 应用核心）", content: ["LLM 的工作机制与模型结构浅析", "Prompt Engineering 提示词设计技巧", "使用 LangChain 构建对话式 AI", "基于知识库的 RAG 应用构建（搜索增强生成）"] },
         { title: "模块五：多模态 AI 应用开发", content: ["使用 OpenAI DALL·E、Stability AI 进行图像生成", "使用 Whisper 进行语音转文字", "文字生成音频（TTS）工具对比与实战", "开发一个文字 + 语音的 AI 助手应用"] },
         { title: "模块六：计算机视觉应用开发", content: ["使用 YOLOv8 进行目标检测", "图像分割、图像风格迁移应用开发", "使用 ControlNet 与 Diffusers 进行图像控制生成", "WebUI + 图像模型部署实践（Gradio + HuggingFace）"] },
-        { title: "模块七：企业级 RAG 系统与私有化大模型应用", content: ["FAISS / Weaviate 向量数据库入门", "自定义文档知识库 + RAG 应用开发", "私有部署模型（LLaMA/Mistral） + FastChat 实战", "AI Agent 任务执行系统构建（如 AutoGPT）"] },
+        { title: "模块七：高级应用：模型微调与 Agent 系统", content: ["FAISS / Weaviate 向量数据库入门", "自定义文档知识库 + RAG 应用开发", "大模型高效微调实战（LoRA / QLoRA）", "私有部署模型（LLaMA/Mistral） + FastChat 实战", "AI Agent 任务执行系统构建（如 AutoGPT）"] },
         { title: "模块八：AI 应用部署与上线", content: ["使用 Docker 容器化部署 AI 服务", "HuggingFace Spaces / Vercel / AWS 一键部署", "模型压缩与推理优化技巧（ONNX, TRT, 量化）", "多用户 SaaS 型 AI 应用结构设计"] },
         { title: "模块九：AI 安全、伦理与合规", content: ["AI 模型安全风险与防御策略", "数据隐私、合规与版权问题", "内容审核与滥用防范机制", "国内外 AI 法规发展趋势简述"] },
         { title: "结课项目：打造一个完整的 AI 应用产品", content: ["项目方向可选：", "智能对话客服系统（LLM + RAG）", "AI 图文创作助手（GPT + 图像生成）", "多语言会议记录助手（语音转写 + 摘要）", "要求：实现完整的前后端、支持用户输入、部署上线"] },
@@ -286,7 +253,7 @@ const CapstoneProject = () => {
 const TargetAudience = () => {
     const audience = [
         {
-            icon: "👩‍💻",
+            icon: "👩‍�",
             title: "后端/数据开发者",
             description: "希望从传统业务转向炙手可热的 AI 赛道，为职业生涯增添新动力。"
         },
@@ -301,7 +268,7 @@ const TargetAudience = () => {
             description: "希望系统性学习，掌握企业真正需要的 AI 开发技能，在求职中脱颖而出。"
         },
         {
-            icon: "👨‍💼",
+            icon: "🚀",
             title: "技术创业者/产品经理",
             description: "希望深入了解 AI 技术实现，更好地规划和打造 AI 驱动的创新产品。"
         }
@@ -332,6 +299,31 @@ const TargetAudience = () => {
         </section>
     );
 };
+
+const NoWorryGuarantee = () => (
+    <section id="guarantee" className="pb-20">
+        <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto bg-gray-900 border-2 border-dashed border-blue-500 rounded-xl p-8 md:p-12 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-white">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400">特别福利</span>：零基础也不怕！
+                </h2>
+                <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
+                    我们深知不是每位开发者都熟悉所有技术栈。为此，我们为零编程基础或跨领域的同学准备了专属的“小灶”预备课程，完全免费！
+                </p>
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h3 className="font-bold text-xl text-white mb-2">Python 基础入门</h3>
+                        <p className="text-gray-400 text-sm">从变量、循环到函数和面向对象，带你快速掌握 AI 开发的必备语言基础。</p>
+                    </div>
+                    <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h3 className="font-bold text-xl text-white mb-2">Web 开发核心</h3>
+                        <p className="text-gray-400 text-sm">讲解 HTTP、API、前后端交互等核心概念，为你学习全栈 AI 应用扫清障碍。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+);
 
 
 const TechStack = () => {
@@ -411,6 +403,7 @@ export default function App() {
         <Modules />
         <CapstoneProject />
         <TargetAudience />
+        <NoWorryGuarantee />
         <TechStack />
         <CTA />
       </main>
